@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datetime superapp</title>
-    <script src="./src/main.js" type="module"></script>
+    
+    <script type="module" src="./src/main.js"></script>
 </head>
 
 <body>
-    <form id="datecalc">
+    <li><a href="#" onclick="showHide('blok_id')">Калькулятор дат</a></li>
+    <li><a href="#" onclick="showHide('blok_1')">Таймер</a></li>
+    <div id="blok_id">  <form id="datecalc">
         <h3>Калькулятор дат</h3>
         <label>
             <strong>Первая дата:</strong>
@@ -21,7 +24,26 @@
         </label>
         <button type="submit">Расчитать промежуток</button>
         <p id="datecalc__result"></p>
-    </form>
+    </form></div>
+    <div id="blok_1">  <div class="clock" id="model3">
+        <div id="countdown">
+          <div id="cd-running">
+            <span id="timer"></span>
+            <span id="millis"></span>
+          </div>
+          <div id="cd-done" style="display: none;">
+    
+          </div>
+        </div>
+      </div>
+      <input type="number" id="minutesInputField" placeholder="minutes" value="30" />
+      <div class="buttons">
+        <button id="btnStart" onclick="start()">Start</button>
+        <button id="btnPause" onclick="pause()">Pause</button>
+        <button id="btneset" onclick="reset()">Reset</button>
+        <script src="timer.js"></script>
+    </div>
+    <script src="switch.js"></script>
 </body>
 
 </html>

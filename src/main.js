@@ -1,6 +1,6 @@
 import { diffDates, diffToHtml } from "./datecalc.js"; // 1
 import { formatError } from "./utils.js"; // 2
-
+import { showHide } from "./switch.js"; 
 const dateCalcForm = document.getElementById("datecalc");
 const dateCalcResult = document.getElementById("datecalc__result");
 
@@ -19,4 +19,7 @@ function handleCalcDates(event) {
     }
     else dateCalcResult.innerHTML = formatError("Для расчета промежутка необходимо заполнить оба поля"); // 5
 }
+
+
+console.log( showHide(elemID) )
 
