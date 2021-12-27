@@ -1,6 +1,8 @@
 import { diffDates, diffToHtml } from "./datecalc.js"; // 1
 import { formatError } from "./utils.js"; // 2
 import { showHide } from "./switch.js"; 
+import { start } from "./timer"; 
+
 const dateCalcForm = document.getElementById("datecalc");
 const dateCalcResult = document.getElementById("datecalc__result");
 
@@ -22,4 +24,5 @@ function handleCalcDates(event) {
 
 
 console.log( showHide(elemID) )
+
 
